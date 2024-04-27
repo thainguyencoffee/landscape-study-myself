@@ -546,6 +546,16 @@ ch05: Persisting and managing data in the cloud
 -	Lược đồ cơ sở dữ liệu rất quan trọng đối với các ứng dụng. Trong sản xuất, bạn nên sử dụng một công cụ như Flyway, cung cấp kiểm soát phiên bản cho cơ sở dữ liệu của bạn.
 -	Flyway nên quản lý bất kỳ thay đổi cơ sở dữ liệu nào để đảm bảo khả năng tái tạo, truy xuất nguồn gốc và độ tin cậy
 
+ch06: Containerizing Spring Boot
+-	Image container là các gói thực thi nhẹ bao gồm mọi thứ cần thiết để chạy ứng dụng bên trong độc lập.
+-	Mỗi image được tạo thành từ một số layers và mỗi layer đại diện cho một sửa đổi được tạo ra bởi lệnh tương ứng. Artifact cùng có thể được chạy dưới dạng container.
+-	Khi bạn chạy một container, một writable layer bổ sung được thêm vào trên cùng của các image layers.
+-	Cách tiêu chuẩn để định nghĩa container image là liệt kê một chuỗi instruction trong một tệp cụ thể được gọi là Dockerfile
+-	Dockerfile hoạt động như một công thức chứa tất cả các bước để xây dựng image mong muốn.
+-	Hiệu suất và bảo mật là những mối quan tâm quan trọng khi xây dựng container image. Ví dụ: bạn không nên lưu trữ bí mật trong bất kỳ image layer nào và không bao giờ chạy container với người dùng root
+-	Một container registry cho OCI images là những gì một Maven repository là cho các thư viện Java. Ví dụ về các container registries là Docker Hub và GitHub Container Registry
+-	Bạn có thể đóng gói các ứng dụng Spring Boot dưới dạng container image theo nhiều cách khác nhau
+-	Dockerfiles cung cấp cho bạn sự linh hoạt tối đa nhưng bạn có trách nhiệm cấu hình mọi thứ bạn cần.
 
 
 

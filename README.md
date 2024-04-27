@@ -556,6 +556,12 @@ ch06: Containerizing Spring Boot
 -	Một container registry cho OCI images là những gì một Maven repository là cho các thư viện Java. Ví dụ về các container registries là Docker Hub và GitHub Container Registry
 -	Bạn có thể đóng gói các ứng dụng Spring Boot dưới dạng container image theo nhiều cách khác nhau
 -	Dockerfiles cung cấp cho bạn sự linh hoạt tối đa nhưng bạn có trách nhiệm cấu hình mọi thứ bạn cần.
+-	Cloud Native Buildpacks (tích hợp với Spring Boot Plugin) cho phép bạn build OCI image trực tiếp từ source code, tối ưu bảo mật, hiệu năng và lưu trữ cho bạn.
+-	Khi bạn chạy các ứng dụng Spring Boot dưới dạng container, bạn nên xem xét cổng nào bạn muốn cung cấp cho thế giới bên ngoài (chẳng hạn như 8080) và liệu các container có nên giao tiếp với nhau hay không. Nếu có, bạn có thể sử dụng máy chủ DNS Docker để liên hệ với các container trong cùng một mạng theo tên container name vì IP hoặc hostname.
+-	Nếu bạn muốn debug một ứng dụng đang chạy dưới dạng container, hãy nhớ expose debug port
+-	Docker Compose là một client để tương tác với Docker server, và nó cung cấp trải nghiệm người dùng tốt hơn Docker CLI. Từ tệp YAML, bạn có thể quản lý tất cả các container của mình.
+-	Bạn có thể sử dụng GitHub Actions để tự động hóa quá trình đóng gói ứng dụng dưới dạng container image, quét các lỗ hổng và xuất bản nó lên container registry. Đó là một phần của commit stage của workflow.
+-	Kết quả của commit stage của workflow là một release candidate
 
 
 

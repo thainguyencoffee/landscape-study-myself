@@ -563,6 +563,24 @@ ch06: Containerizing Spring Boot
 -	Bạn có thể sử dụng GitHub Actions để tự động hóa quá trình đóng gói ứng dụng dưới dạng container image, quét các lỗ hổng và xuất bản nó lên container registry. Đó là một phần của commit stage của workflow.
 -	Kết quả của commit stage của workflow là một release candidate
 
+ch07: Kubernetes fundamentals for Spring Boot
+-	Docker hoạt động tốt khi chạy các container một phiên bản trên một máy duy nhất. Khi hệ thống của bạn cần các thuộc tính như khả năng mở rộng và khả năng phục hồi, bạn có thể sử dụng Kubernetes
+-	Kubernetes cung cấp tất cả các tính năng để mở rộng quy mô container trên một cụm máy, đảm bảo khả năng phục hồi cả khi container bị lỗi và khi máy gặp sự cố.
+-	Pod là đơn vị có thể deployable nhỏ nhất trong Kubernetes.
+-	Thay vì tạo Pod trực tiếp, bạn có thể sử dụng đối tượng Deployment để khai báo trạng thái mong muốn cho các ứng dụng của mình và Kubernetes sẽ đảm bảo nó khớp với trạng thái thực tế. Điều đó bao gồm việc thiết lập và chạy số lượng bản sao mong muốn bất cứ lúc nào.
+-	Đám mây là một môi trường năng động và cấu trúc liên kết liên tục thay đổi. Service discovery và load balancing cho phép bạn tự động thiết lập tương tác giữa các service, được quản lý ở phía client (ví dụ: sử dụng Spring Cloud Netflix Eureka) hoặc ở phía server (ví dụ sử dụng Kubernetes)
+-	Kubernetes cung cấp một tính năng service discovery và load balancing gốc mà bạn có thể sử dụng thông qua các đối tượng Service
+-	Mỗi Service name có thể được sử dụng như một DNS name. Kubernetes sẽ phân giải tên thành Service IP address và cuối cùng, chuyển tiếp yêu cầu đến một trong các phiên bản có sẵn.
+-	Các bạn có thể deploy các ứng dụng Spring Boot lên một Kubernetes cluster bằng cách định nghĩa hai YAML manifest: một cho đối tượng Deployment và một cho đối tượng Service.
+-	Kubectl client cho phép bạn tạo các đối tượng từ một file bằng lệnh kubectl apply -f <your-file.yml>.
+-	Các ứng dụng cloud native nên dùng một lần (khởi động nhanh và tắt máy duyên dáng) và không trạng thái (dựa vào các data service để lưu trữ trạng thái).
+-	Graceful shutdown được hỗ trợ bởi cả Spring Boot và Kubernetes và là một khía cạnh thiết yếu của các scalable applications.
+-	Kubernetes sử dụng ReplicaSet controllers để replicate các Pod ứng dụng của bạn và giữ cho chúng chạy.
+-	Tilt là một công cụ tự động hóa quy trình phát triển cục bộ của bạn với Kubernetes: bạn làm việc trên ứng dụng trong khi Tilt đảm nhận việc xây dựng image, triển khai nó vào cụm Kubernetes cục bộ của bạn và luôn cập nhật bất cứ khi nào bạn thay đổi điều gì đó trong mã.
+-	Bạn có thể start Tilt cho dự án của mình bằng tilt up.
+-	Octant dashboard cho phép bạn trực quan hóa Kubernetes workloads của bạn.
+-	Octant là một công cụ tiện lợi mà bạn có thể sử dụng không chỉ để inspecting và khắc phục sự cố cụm Kubernetes cục bộ mà còn cho cụm từ xa.
+-	Kubeval là một công cụ tiện lợi mà bạn có thể sử dụng để validate các tệp kê khai Kubernetes. Tính năng này đặc biệt hữu ích khi được đưa vào deployment pipeline.
 
 
 

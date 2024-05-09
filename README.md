@@ -612,7 +612,48 @@ ch07: Kubernetes fundamentals for Spring Boot
 -	Octant là một công cụ tiện lợi mà bạn có thể sử dụng không chỉ để inspecting và khắc phục sự cố cụm Kubernetes cục bộ mà còn cho cụm từ xa.
 -	Kubeval là một công cụ tiện lợi mà bạn có thể sử dụng để validate các tệp kê khai Kubernetes. Tính năng này đặc biệt hữu ích khi được đưa vào deployment pipeline.
 
+ch08: Reactive Spring: Resilience and scalability
+- Khi bạn mong đợi lưu lượng truy cập cao và đồng thời với ít tài nguyên tính toán hơn, mô hình reactive có thể cải thiện scalability, resilience và cost-effectiveness.
+- Chọn giữa ngăn xếp không phản ứng và ngăn xếp phản ứng theo yêu cầu của bạn.
+- Spring WebFlux dựa trên Project Reactor và là core của reactive stack trong Spring. Nó hỗ trợ I / O bất đồng bộ, non-blocking.
+- Các dịch vụ RESTful reactive có thể được thực hiện thông qua các lớp @RestController hoặc router functions.
+- Spring WebFlux slice có thể được kiểm thử thông qua annotation @WebFluxTest.
+- Spring Data R2DBC cung cấp hỗ trợ cho reactive data persistence bằng cách sử dụng driver R2DBC. Cách tiếp cận này giống như đối với bất kỳ dự án Spring Data nào: database drivers, entities và repositories.
+- Database schemas có thể được quản lý bằng Flyway
+- Lát cắt persistence của một ứng dụng reactive có thể được kiểm thử bằng cách sử dụng chú thích @DataR2dbcTest và Testcontainers.
+- Một hệ thống có khả năng phục hồi nếu nó tiếp tục cung cấp dịch vụ của mình khi đối mặt với các lỗi mà người dùng không nhận ra. Đôi khi điều đó là không thể, vì vậy ít nhất bạn có thể làm là đảm bảo sự xuống cấp duyên dáng của các dịch vụ.
+- WebClient dựa trên Project Reactor và làm việc với các publisher Mono và Flux.
+- Bạn có thể sử dụng các Reactor operators để cấu hình timeouts, retries, fallbacks và error handling để làm cho tương tác linh hoạt hơn với bất kỳ lỗi nào trong dịch vụ downstream hoặc do mạng.
 
+ch09: API gateway and circuit breakers
+- Một API gateway cung cấp một số lợi ích trong kiến trúc phân tán, bao gồm tách các internal services khỏi external API và cung cấp một nơi trung tâm, thuận tiện để xử lý các mối quan tâm xuyên suốt như bảo mật, giám sát và khả năng phục hồi
+- Spring Cloud Gateway dựa trên Spring reactive stack. Nó cung cấp một API gateway implementation, và nó tích hợp với các project Spring khác để thêm các mối quan tâm xuyên suốt cho ứng dụng, bao gồm Spring Security, Spring Cloud Circuit Breaker và Spring Session.
+- Routes là cốt lõi của Spring Cloud Gateway. Chúng được xác định bởi một ID duy nhất, một tập hợp các predicates xác định xem có nên đi theo route này hay không, URI để chuyển tiếp yêu cầu nếu predicate cho phép và một tập hợp các filters được áp dụng trước hoặc sau khi chuyển tiếp yêu cầu downstream.
+- Retry filter dùng để định cấu hình các lần thử lại cho các routes cụ thể.
+- RequestRateLimiter filter, được tích hợp với Spring Data Redis Reactive, giới hạn số lượng request có thể được chấp nhận trong một khoảng thời gian cụ thể.
+- CircuitBreaker filter, dựa trên Spring Cloud Circuit Breaker và Resilience4J, xác định circuit breakers, time limiters và fallbacks cho các routes cụ thể.
+- Các ứng dụng cloud native phải không có trạng thái. Các dịch vụ dữ liệu nên được sử dụng để lưu trữ trạng thái. Ví dụ: PostgreSQL được sử dụng để lưu trữ liên tục và Redis cho bộ nhớ cache và dữ liệu session.
+- Kubernetes Ingress resource cho phép bạn quản lý quyền truy cập bên ngoài vào các ứng dụng đang chạy bên trong cụm Kubernetes.
+- Routing rules được thực thi bởi ingress controller, đây là một ứng dụng cũng chạy trong cluster.
 
-
+ch10: Event-driven applications and functions
+- Kiến trúc hướng sự kiện là các hệ thống phân tán tương tác với nhau bằng cách sản xuất và tiêu thụ các sự kiện.
+- Một sự kiện là một cái gì đó có liên quan đã xảy ra trong một hệ thống
+- Trong mô hình pub/sub, producers publish các sự kiện, được gửi đến tất cả consumers để được tiêu thụ.
+- Các nền tảng xử lý sự kiện như RabbitMQ và Kafka chịu trách nhiệm thu thập các sự kiện từ producers, định tuyến và phân phối chúng cho consumers quan tâm.
+- Trong giao thức AMQP, producers gửi message đến một exchange trong một broker sau đó broker sẽ forward chúng đến queue theo routing algorithms cụ thể.
+- Trong giao thức AMQP, consumers nhận được message từ queue trong broker.
+- Trong giao thức AMQP, message là cấu trúc dữ liệu bao gồm các key/value attributes và binary payload.
+- RabbitMQ là một trình trung chuyển message dựa trên giao thức AMQP mà bạn có thể sử dụng để triển khai các kiến trúc hướng sự kiện dựa trên mô hình pub/sub.
+- RabbitMQ cung cấp tính sẵn sàng, khả năng phục hồi và sao chép dữ liệu cao.
+- Spring Cloud Function cho phép bạn triển khai logic businesses của mình bằng cách sử dụng các giao diện Java Function, Supplier và Consumer tiêu chuẩn.
+- Spring Cloud Function bao bọc function của bạn và cung cấp một số tính năng thú vị như transparent type conversion và function composition.
+- Functions được triển khai trong bối cảnh của Spring Cloud Function có thể được exposed và tích hợp với các hệ thống bên ngoài theo nhiều cách khác nhau.
+- Functions có thể được exposed dưới dạng REST endpoint, được đóng gói và triển khai trong nền tảng FaaS dưới dạng các ứng dụng serverless (Knative, AWS Lambda, Azure Function, Google Cloud Functions) hoặc chúng có thể được liên kết với các message channels.
+- Spring Cloud Stream, được xây dựng dựa trên Spring Cloud Function, cung cấp cho bạn tất cả các hệ thống ống nước cần thiết để tích hợp các functions của bạn với các external messaging systems như RabbitMQ hoặc Kafka.
+- Khi bạn triển khai các functions của mình, bạn không phải thực hiện bất kỳ thay đổi nào đối với mã của mình. Bạn chỉ cần thêm một dependency vào Spring Cloud Stream và cấu hình nó để thích ứng với nhu cầu của bạn.
+- Trong Spring Cloud Stream, destination binders cung cấp tích hợp với các external messaging systems.
+- Trong Spring Cloud Stream, các destination bindings (input và output) kết nối bridge các producers và consumers trong các ứng dụng của bạn với exchanges và queues trong một message broker như RabbitMQ.
+- Functions và consumers được kích hoạt tự động khi có message mới.
+- Suppliers cần phải được kích hoạt rõ ràng, chẳng hạn như bằng cách gửi message rõ ràng đến một destination binding.
 

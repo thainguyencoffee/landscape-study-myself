@@ -7,7 +7,7 @@
 |5|[Cloud Native Spring](https://www.manning.com/books/cloud-native-spring-in-action)|
 
 ## Spring in action
-Chaper 01- Getting started with Spring
+**Chaper 01- Getting started with Spring**
 - 1.1 What is Spring?
 - 1.2 Initializing a Spring application
   - 1.2.1 Initializing a Spring project with Spring Tool Suite
@@ -29,7 +29,7 @@ Chaper 01- Getting started with Spring
   - 1.4.7 Spring Native
 - Summary
 
-Chapter 02 - Developing web Applications
+**Chapter 02 - Developing web Applications**
 - 2.1 Displaying information
   - 2.1.1 Establishing the domain
   - 2.1.2 Creating a controller class
@@ -44,21 +44,21 @@ Chapter 02 - Developing web Applications
   - 2.5.1 Caching templates
 - Summary
 
-Chapter 03 -Working with data
+**Chapter 03 -Working with data**
 - 3.3 Persisting data with Spring Data JPA
   - 3.3.1 Adding Spring Data JPA to the project
   - 3.3.2 Annotating the domain as entities
   - 3.3.3 Declaring JPA repositories
   - 3.3.4 Customizing repositories
 
-Chapter 04 - Working with nonrelational data
+**Chapter 04 - Working with nonrelational data**
 - 4.1 Working with Cassandra repositories
   - 4.1.1 Enabling Spring Data Cassandra
   - 4.1.2 Understanding Cassandra data modeling
   - 4.1.3 Mapping domain types for Cassandra persistence
   - 4.1.4 Writing Cassandra repositories
 
-Chapter05 - Securing Spring
+**Chapter05 - Securing Spring**
 - 5.1 Enabling Spring Security
 - 5.2 Configuring authentication
   - 5.2.1 In-memory user details service
@@ -71,7 +71,7 @@ Chapter05 - Securing Spring
 - 5.4 Applying method-level security
 - 5.5 Knowing your user
 
-Chapter 06 - Working with configuration properties
+**Chapter 06 - Working with configuration properties**
 - 6.1 Fine-tuning autoconfiguration
   - 6.1.1 Understanding Spring’s environment abstraction
   - 6.1.2 Configuring a data source
@@ -85,7 +85,7 @@ Chapter 06 - Working with configuration properties
   - 6.3.2 Activating profiles
   - 6.3.3 Conditionally creating beans with profiles
   
-Chapter 07-Creating REST services
+**Chapter 07-Creating REST services**
 - 7.1 Writing RESTful controllers
   - 7.1.1 Retrieving data from the server
   - 7.1.2 Sending data to the server
@@ -99,13 +99,13 @@ Chapter 07-Creating REST services
   - 7.3.3 DELETEing resources
   - 7.3.4 POSTing resource data
 
-Chapter 8 -Securing REST
+**Chapter 8 -Securing REST**
 - 8.1 Introducing OAuth 2
 - 8.2 Creating an authorization server
 - 8.3 Securing an API with a resource server
 - 8.4 Developing the client
 
-Chapter 09 - Sending messages Asynchronously
+**Chapter 09 - Sending messages Asynchronously**
 - 9.1 Sending messages with JMS
   - 9.1.1 Setting up JMS
   - 9.1.2 Sending messages with JmsTemplate
@@ -115,7 +115,7 @@ Chapter 09 - Sending messages Asynchronously
   - 9.3.2 Sending messages with KafkaTemplate
   - 9.3.3 Writing Kafka listeners
 
-Chapter 10 -Integrating Spring
+**Chapter 10 -Integrating Spring**
 - 10.1 Declaring a simple integration flow
   - 10.1.1 Defining integration flows with XML
   - 10.1.2 Configuring integration flows in Java
@@ -131,7 +131,7 @@ Chapter 10 -Integrating Spring
   - 10.2.8 Channel adapters
 - 10.3 Creating an email integration flow
 
-Chapter 11- Introducing Reactor
+**Chapter 11- Introducing Reactor**
 - 11.1 Understanding reactive programming
 - 11.2 Getting started with Reactor
   - 11.2.1 Diagramming reactive flows
@@ -141,7 +141,7 @@ Chapter 11- Introducing Reactor
   - 11.3.2 Combining reactive types
   - 11.3.3 Transforming and filtering reactive streams
   - 11.3.4 Performing logic operations on reactive types
-Chapter 12 - Developing reactive APIs
+**Chapter 12 - Developing reactive APIs**
 - 12.1 Working with Spring WebFlux
   - 12.1.1 Introducing Spring WebFlux
   - 12.1.2 Writing reactive controllers
@@ -158,7 +158,7 @@ Chapter 12 - Developing reactive APIs
   - 12.5.1 Configuring reactive web security
   - 12.5.2 Configuring a reactive user details service
 
-Chapter 13- Persisting data reactively
+**Chapter 13- Persisting data reactively**
 - 13.1 Working with R2DBC
   - 13.1.1 Defining domain entities for R2DBC
   - 13.1.2 Defining reactive repositories
@@ -170,7 +170,7 @@ Chapter 13- Persisting data reactively
   - 13.3.2 Creating reactive Cassandra repositories
   - 13.3.3 Testing reactive Cassandra repositories
 
-Chapter 14 - Working with Rsocket
+**Chapter 14 - Working with Rsocket**
 - 14.1 Introducing RSocket
 - 14.2 Creating a simple RSocket server and client
   - 14.2.1 Working with request-response
@@ -180,14 +180,14 @@ Chapter 14 - Working with Rsocket
 - 14.3 Transporting RSocket over WebSocket
 
 ## grokking algorithms
-ch01: Introduction to algorithm
+**ch01: Introduction to algorithm**
 - Tìm kiếm nhị phân nhanh hơn nhiều so với tìm kiếm đơn giản khi mảng của bạn trở nên lớn.
 - O(log n) nhanh hơn O(n), nhưng nó trở nhanh hơn rất nhiều khi danh sách các mục bạn đang tìm kiếm lớn lên.
 - Tốc độ của thuật toán không được đo bằng giây.
 - Thời gian của thuật toán được đo dưới góc độ sự tăng của một thuật toán.
 - Thời gian của thuật toán được viết bằng ký hiệu Big O.
 
-ch02: Selection sort
+**ch02: Selection sort**
 - Bộ nhớ của máy tính của bạn giống như một bộ sưu tập hộp lớn.
 - Khi bạn muốn lưu trữ nhiều phần tử, hãy sử dụng một mảng hoặc danh sách liên kết.
 - Trong một mảng, tất cả các phần tử của bạn được lưu trữ ngay bên cạnh nhau.
@@ -195,14 +195,14 @@ ch02: Selection sort
 - Mảng cho phép đọc nhanh.
 - Danh sách liên kết cho phép thêm và xóa nhanh.
 
-ch03: Recursion: 
+**ch03: Recursion:** 
 - Đệ quy là khi một hàm gọi chính nó.
 - Mọi hàm đệ quy đều có hai trường hợp: trường hợp cơ sở và trường hợp đệ quy.
 - Một ngăn xếp có hai thao tác: đẩy (push) và lấy ra (pop).
 - Tất cả các cuộc gọi hàm được đặt lên ngăn xếp gọi (call stack).
 - Ngăn xếp gọi có thể trở nên rất lớn, chiếm nhiều bộ nhớ.
 
-ch04: Quicksort: 
+**ch04: Quicksort:** 
 - Chia để trị (D&C) hoạt động bằng cách chia một vấn đề thành các phần nhỏ hơn và nhỏ hơn.
 - Nếu bạn đang sử dụng D&C trên một danh sách, trường hợp cơ bản có thể là một mảng trống hoặc một mảng chỉ có một phần tử.
 - Nếu bạn đang thực hiện thuật toán quicksort, hãy chọn một phần tử ngẫu nhiên làm trục. Thời gian chạy trung bình của quicksort là O(n log n)!
@@ -210,7 +210,7 @@ ch04: Quicksort:
 - Nếu có hai thuật toán có cùng thời gian chạy big-O, một có thể luôn nhanh hơn so với thuật toán khác. Đó là lý do tại sao quicksort nhanh hơn merge sort.
 - Hệ số hầu như không quan trọng đối với tìm kiếm đơn giản so với tìm kiếm nhị phân, vì O(log n) nhanh hơn rất nhiều so với O(n) khi danh sách của bạn trở nên lớn.
 
-ch05: Hash tables
+**ch05: Hash tables**
 - Bảng băm là một cấu trúc dữ liệu mạnh mẽ vì chúng rất nhanh và cho phép bạn mô phỏng dữ liệu theo một cách khác. Bạn có thể sớm nhận ra rằng bạn đang sử dụng chúng liên tục:
 - Bạn có thể tạo một bảng băm bằng cách kết hợp một hàm băm với một mảng.
 - Va chạm là xấu. Bạn cần một hàm băm giảm thiểu va chạm.
@@ -220,7 +220,7 @@ ch05: Hash tables
 - Bảng băm được sử dụng để lưu trữ dữ liệu cache (ví dụ, với một máy chủ web).
 - Bảng băm tuyệt vời để phát hiện trùng lặp.
 
-ch06: Breadth-first-search
+**ch06: Breadth-first-search**
 - Breadth-first search thông báo xem có đường đi từ A đến B hay không.
 - Nếu có một đường đi, breadth-first search sẽ tìm đường đi ngắn nhất.
 - Nếu bạn có một vấn đề như "tìm đường đi ngắn nhất đến X," hãy cố gắng mô hình hóa vấn đề của bạn dưới dạng đồ thị và sử dụng breadth-first search để giải quyết.
@@ -231,20 +231,20 @@ ch06: Breadth-first-search
 - Bạn cần kiểm tra người dùng theo thứ tự họ được thêm vào danh sách tìm kiếm, vì vậy danh sách tìm kiếm cần là một hàng đợi. Nếu không, bạn sẽ không có được đường đi ngắn nhất.
 - Sau khi kiểm tra một người, hãy đảm bảo bạn không kiểm tra họ lại. Nếu không, bạn có thể rơi vào vòng lặp vô hạn.
 
-ch07: Trees
+**ch07: Trees**
 - Cây là một loại đồ thị, nhưng cây không có chu kỳ.
 - Depth-first search là một thuật toán duyệt đồ thị khác. Nó không thể được sử dụng để tìm đường đi ngắn nhất.
 - Cây nhị phân là một loại cây đặc biệt nơi các nút có thể có tối đa hai con.
 - Có nhiều loại mã hóa ký tự khác nhau. Unicode là tiêu chuẩn quốc tế, và UTF-8 là mã hóa Unicode phổ biến nhất.
 
-ch08: Balanced trees
+**ch08: Balanced trees**
 - Cây tìm kiếm nhị phân cân bằng (BSTs) cung cấp hiệu suất tìm kiếm big-O tương đương với mảng, với hiệu suất chèn tốt hơn.
 - Độ cao của một cây ảnh hưởng đến hiệu suất của cây.
 - Cây AVL là một loại phổ biến của BST cân bằng. Như hầu hết các cây cân bằng khác, cây AVL tự cân bằng thông qua các phép xoay.
 - B-Tree là các BST tổng quát generalized, nơi mỗi node có thể có nhiều khóa và nhiều child node.
 - Thời gian tìm kiếm giống như thời gian di chuyển đến cửa hàng thực phẩm. B-Tree cố gắng giảm thiểu thời gian tìm kiếm bằng cách đọc nhiều dữ liệu trong một lần.
 
-ch09: Dijkstra's algorithm
+**ch09: Dijkstra's algorithm**
 - Breadth-first search được sử dụng để tính toán đường đi ngắn nhất cho
 - một đồ thị không có trọng số unweighted graph.
 - Thuật toán của Dijkstra được sử dụng để tính toán đường đi ngắn nhất cho
@@ -252,7 +252,7 @@ ch09: Dijkstra's algorithm
 - Thuật toán của Dijkstra hoạt động khi tất cả các trọng số đều không âm.
 - Nếu có trọng số âm, sử dụng thuật toán Bellman-Ford.
 
-ch10: Greedy algorithms
+**ch10: Greedy algorithms**
 - Thuật toán tham lam (greedy algorithms) tối ưu hóa cục bộ, hy vọng sẽ đạt được giá trị tối ưu toàn cầu.
 - Một vấn đề thuộc P nếu nó vừa nhanh chóng giải quyết vừa nhanh chóng xác minh.
 - Một vấn đề thuộc NP nếu nó khó giải quyết nhưng lại nhanh chóng xác minh.
@@ -262,7 +262,7 @@ ch10: Greedy algorithms
 - Nếu bạn đối mặt với một vấn đề NP-Hard, lựa chọn tốt nhất là sử dụng một thuật toán xấp xỉ (approximation algorithm).
 - Thuật toán tham lam dễ viết và chạy nhanh, vì vậy chúng làm approximation algorithm tốt.
 
-ch11: Dynamic programming
+**ch11: Dynamic programming**
 - Quy hoạch động hữu ích khi bạn cố gắng tối ưu hóa một điều gì đó dưới ràng buộc nào đó.
 - Bạn có thể sử dụng quy hoạch động khi vấn đề có thể được chia thành các bài toán con rời rạc.
 - Mọi giải pháp quy hoạch động đều liên quan đến một lưới.
@@ -273,7 +273,7 @@ ch11: Dynamic programming
 
 
 ## Spring Boot in practice
-ch01: booting spring boot
+**ch01: booting spring boot**
 - Spring Boot là gì và lợi ích mà nó mang lại so với một ứng dụng Spring truyền thống.
 - Các tính năng của Spring Boot và các thành phần khác nhau của nó.
 - Cấu trúc và các thành phần của một dự án Spring Boot được tạo ra.
@@ -283,14 +283,14 @@ ch01: booting spring boot
 - Tổng quan về custom starter, autoconfiguration, failure analyzers và actuators.
 - Giới thiệu về các công cụ phát triển Spring Boot để tăng năng suất phát triển.
 
-ch02: common spring boot tasks
+**ch02: common spring boot tasks**
 - Nhiều cách tiếp cận quản lý thuộc tính ứng dụng trong một ứng dụng Spring Boot.
 - Cách sử dụng @ConfigurationProperties để định nghĩa các thuộc tính một cách an toàn theo kiểu.
 - Cách cấu hình CommandLineRunner để thực hiện mã thực thi một lần khi ứng dụng Spring Boot khởi chạy.
 - Ghi log mặc định trên console của Spring Boot, cấu hình bổ sung và cách sử dụng log Log4j2 trong một ứng dụng Spring Boot.
 - Cách sử dụng API Bean Validation để xác nhận POJO trong ứng dụng Spring Boot của bạn với các chú thích tích hợp sẵn cũng như với các chú thích tùy chỉnh.
 
-ch03: introducing spring data
+**ch03: introducing spring data**
 - Bạn đã được giới thiệu về Spring Data, lý do tại sao nó cần thiết và các mô-đun khác nhau của Spring Data.
 - Bạn có thể cấu hình cơ sở dữ liệu quan hệ và cơ sở dữ liệu NoSQL với Spring Boot.
 - Bạn có thể khởi tạo schema cơ sở dữ liệu với schema.sql và data.sql cũng như thông qua Spring Data JPA.
@@ -298,21 +298,21 @@ ch03: introducing spring data
 - Bạn có thể truy cập dữ liệu từ cơ sở dữ liệu quan hệ bằng cách sử dụng các phương thức truy vấn, @Named-Query, @Query, Criteria API và Querydsl.
 - Bạn biết cách quản lý mối quan hệ many-to-many giữa các đối tượng domain trong ứng dụng Spring Boot.
 
-ch04: autoconfiguration & actuator
+**ch04: autoconfiguration & actuator**
 - Chúng ta đã có một cuộc thảo luận sâu rộng về Spring Boot autoconfiguration. Chúng ta đã khám phá các conditional annotations đóng vai trò quan trọng trong việc triển khai autoconfiguration và tìm hiểu về một built-in class, DataSourceAutoConfiguration, để hiểu cách nó hoạt động trong ứng dụng Spring Boot.
 - Chúng ta đã thảo luận về Spring Boot DevTools, cung cấp một bộ tính năng cho trải nghiệm phát triển dễ chịu. Automatic application restart, disabling caching và làm mới trình duyệt là một số tính năng đáng chú ý.
 - Chúng ta đã khám phá Spring Boot FailureAnalyzer và vai trò của nó trong việc xác nhận các vấn đề khởi động ứng dụng khác nhau. Chúng ta cũng thảo luận về cách triển khai một FailureAnalyzer tùy chỉnh.
 - Chúng ta đã có một cuộc thảo luận sâu rộng về Spring Boot actuator và các endpoint khác nhau của nó. Sau đó, chúng ta đã khám phá các endpoint /info và /health một cách chi tiết hơn. Chúng ta cũng đã học một số kỹ thuật để định nghĩa và bao gồm thông tin ứng dụng tùy chỉnh và trạng thái sức khỏe trong các endpoint này.
 - Chúng ta đã khám phá các metric tích hợp của Spring Boot. Chúng ta cũng đã thảo luận về cách tạo ra các metric tùy chỉnh như Counter, Gauge, Timer và Distribution Summary. Cuối cùng, chúng ta đã thực hiện cách sử dụng Prometheus và Grafana để giám sát và xem các metric trong một bảng điều khiển GUI theo thời gian thực.
 
-ch05: Security Spring boot application
+**ch05: Security Spring boot application**
 - Chúng ta đã tìm hiểu về Spring Security, kiến trúc của nó và tự động cấu hình cho Spring Security trong Spring Boot.
 - Chúng ta đã thảo luận về cách triển khai Spring Security trong một ứng dụng Spring Boot và tùy chỉnh trang đăng nhập người dùng.
 - Chúng ta đã khám phá cách triển khai authentication trong bộ nhớ, JDBC và LDAP với Spring Security.
 - Chúng ta đã thảo luận về cách triển khai kiểm soát truy cập dựa trên vai trò trong ứng dụng Spring Boot.
 - Chúng ta đã học cách triển khai xác thực HTTP basic để xác thực người dùng trong một ứng dụng Spring Boot.
 
-ch06: Implementing additional security with Spring security
+**ch06: Implementing additional security with Spring security**
 - Chúng tôi đã kích hoạt HTTPS trong ứng dụng Spring Boot với self-signed certificate và triển khai chuyển hướng tất cả các yêu cầu HTTP sang HTTPS.
 - Chúng tôi triển khai Hashicorp Vault để externalize các bí mật ứng dụng trong vault và kết nối ứng dụng Spring Boot với vault để truy cập bí mật.
 - Chúng tôi triển khai một mô-đun đăng ký người dùng và kích hoạt xác nhận tài khoản người dùng qua email.
@@ -326,9 +326,9 @@ ch06: Implementing additional security with Spring security
 
 
 ## Reactive Spring
-Chapter 1. Introduction
+**Chapter 1. Introduction**
 
-Chapter 2. Prerequisites
+**Chapter 2. Prerequisites**
 - 2.1. Who this book is for
 - 2.2. What you need for this book
 - 2.3. Conventions
@@ -341,16 +341,16 @@ Chapter 2. Prerequisites
   - 2.8.2. Function Interfaces, Lambdas and Method References
   - 2.8.3. Lombok
 
-Chapter 3. Bootstrap
+**Chapter 3. Bootstrap**
 
-Chapter 4. IO, IO, It’s Off to Work We Go…
+**Chapter 4. IO, IO, It’s Off to Work We Go…**
 - 4.1. A Natural Limit
 - 4.2. Phép ẩn dụ còn thiếu
 - 4.3. The Reactive Streams Initiative
 - 4.4. Are We There Yet?
 - 4.5. Towards a More Functional, Reactive Spring
 
-Chapter 5. Reactor
+**Chapter 5. Reactor**
 - 5.1. The Reactive Streams Specification
 - 5.2. Project Reactor
 - 5.3. Creating New Reactive Streams
@@ -377,7 +377,7 @@ Chapter 5. Reactor
 - 5.11. Debugging
 - 5.12. Next Steps
 
-Chapter 6. Data Access
+**Chapter 6. Data Access**
 - 6.1. Why Should You Go Reactive?
 - 6.2. What About Transactions?
 - 6.3. Reactive SQL Data Access
@@ -393,7 +393,7 @@ Chapter 6. Data Access
   - 6.4.2. MongoDB
   - 6.4.3. Basic Spring Data MongoDB
 
-Chapter 7. HTTP
+**Chapter 7. HTTP**
 - 7.1. HTTP Works
   - 7.1.1. HTTP Requests
   - 7.1.2. HTTP Responses
@@ -423,12 +423,12 @@ Chapter 7. HTTP
 - 7.11. Security
 - 7.12. Next Steps
 
-Chapter 8. Testing
+**Chapter 8. Testing**
 - 8.1. How I Stopped Worrying and Learned to Love Testing
 - 8.2. Test Driven Development
 - 8.3. Inside-Out or Outside-In
 
-Chapter 9. Rsocket
+**Chapter 9. Rsocket**
 - 9.1. Motivations for Rsocket
   - 9.1.1. HTTP or Not HTTP
   - 9.1.2. RSocket: A Reactive Network Protocol
@@ -456,7 +456,7 @@ Chapter 9. Rsocket
   - 9.7.2. A Declarative RSocket Client
   - 9.7.3. A Super Handy RSocket CLI
 
-Chapter 10. Service Orchestration and Composition
+**Chapter 10. Service Orchestration and Composition**
 - 10.1. Service Registration and Discovery
 - 10.2. Some Simple Sample Services
   - 10.2.1. Customer Service
@@ -483,11 +483,11 @@ Chapter 10. Service Orchestration and Composition
   - 10.8.6. Alternative Configuration
 - 10.9. Summary
 
-Chapter 11. Action!
+**Chapter 11. Action!**
 - 11.1. Websites to Bookmark
 - 11.2. Additional reading
 Acknowledgements
-Chapter 12. About the Author
+**Chapter 12. About the Author**
 
 
 ## Cloud native spring

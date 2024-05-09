@@ -181,19 +181,19 @@ Chapter 14 - Working with Rsocket
 
 ## grokking algorithms
 ch01: Introduction to algorithm
-• Tìm kiếm nhị phân nhanh hơn nhiều so với tìm kiếm đơn giản khi mảng của bạn trở nên lớn.
-• O(log n) nhanh hơn O(n), nhưng nó trở nhanh hơn rất nhiều khi danh sách các mục bạn đang tìm kiếm lớn lên.
-• Tốc độ của thuật toán không được đo bằng giây.
-• Thời gian của thuật toán được đo dưới góc độ sự tăng của một thuật toán.
-• Thời gian của thuật toán được viết bằng ký hiệu Big O.
+- Tìm kiếm nhị phân nhanh hơn nhiều so với tìm kiếm đơn giản khi mảng của bạn trở nên lớn.
+- O(log n) nhanh hơn O(n), nhưng nó trở nhanh hơn rất nhiều khi danh sách các mục bạn đang tìm kiếm lớn lên.
+- Tốc độ của thuật toán không được đo bằng giây.
+- Thời gian của thuật toán được đo dưới góc độ sự tăng của một thuật toán.
+- Thời gian của thuật toán được viết bằng ký hiệu Big O.
 
 ch02: Selection sort
-• Bộ nhớ của máy tính của bạn giống như một bộ sưu tập hộp lớn.
-• Khi bạn muốn lưu trữ nhiều phần tử, hãy sử dụng một mảng hoặc danh sách liên kết.
-• Trong một mảng, tất cả các phần tử của bạn được lưu trữ ngay bên cạnh nhau.
-• Trong một danh sách liên kết, các phần tử được phân tán khắp nơi và một phần tử lưu địa chỉ của phần tử tiếp theo.
-• Mảng cho phép đọc nhanh.
-• Danh sách liên kết cho phép thêm và xóa nhanh.
+- Bộ nhớ của máy tính của bạn giống như một bộ sưu tập hộp lớn.
+- Khi bạn muốn lưu trữ nhiều phần tử, hãy sử dụng một mảng hoặc danh sách liên kết.
+- Trong một mảng, tất cả các phần tử của bạn được lưu trữ ngay bên cạnh nhau.
+- Trong một danh sách liên kết, các phần tử được phân tán khắp nơi và một phần tử lưu địa chỉ của phần tử tiếp theo.
+- Mảng cho phép đọc nhanh.
+- Danh sách liên kết cho phép thêm và xóa nhanh.
 
 ch03: Recursion: 
 - Đệ quy là khi một hàm gọi chính nó.
@@ -203,12 +203,15 @@ ch03: Recursion:
 - Ngăn xếp gọi có thể trở nên rất lớn, chiếm nhiều bộ nhớ.
 
 ch04: Quicksort: 
-- Chia để trị (D&C) hoạt động bằng cách chia một vấn đề thành các phần nhỏ hơn và nhỏ hơn. Nếu bạn đang sử dụng D&C trên một danh sách, trường hợp cơ bản có thể là một mảng trống hoặc một mảng chỉ có một phần tử. Nếu bạn đang thực hiện thuật toán quicksort, hãy chọn một phần tử ngẫu nhiên làm trục. Thời gian chạy trung bình của quicksort là O(n log n)!
-- Hệ số trong một hàm đôi khi quan trọng. Nếu có hai thuật toán có cùng thời gian chạy big-O, một có thể luôn nhanh hơn so với thuật toán khác. Đó là lý do tại sao quicksort nhanh hơn merge sort.
+- Chia để trị (D&C) hoạt động bằng cách chia một vấn đề thành các phần nhỏ hơn và nhỏ hơn.
+- Nếu bạn đang sử dụng D&C trên một danh sách, trường hợp cơ bản có thể là một mảng trống hoặc một mảng chỉ có một phần tử.
+- Nếu bạn đang thực hiện thuật toán quicksort, hãy chọn một phần tử ngẫu nhiên làm trục. Thời gian chạy trung bình của quicksort là O(n log n)!
+- Hệ số trong một hàm đôi khi quan trọng.
+- Nếu có hai thuật toán có cùng thời gian chạy big-O, một có thể luôn nhanh hơn so với thuật toán khác. Đó là lý do tại sao quicksort nhanh hơn merge sort.
 - Hệ số hầu như không quan trọng đối với tìm kiếm đơn giản so với tìm kiếm nhị phân, vì O(log n) nhanh hơn rất nhiều so với O(n) khi danh sách của bạn trở nên lớn.
 
 ch05: Hash tables
-Bảng băm là một cấu trúc dữ liệu mạnh mẽ vì chúng rất nhanh và cho phép bạn mô phỏng dữ liệu theo một cách khác. Bạn có thể sớm nhận ra rằng bạn đang sử dụng chúng liên tục:
+- Bảng băm là một cấu trúc dữ liệu mạnh mẽ vì chúng rất nhanh và cho phép bạn mô phỏng dữ liệu theo một cách khác. Bạn có thể sớm nhận ra rằng bạn đang sử dụng chúng liên tục:
 - Bạn có thể tạo một bảng băm bằng cách kết hợp một hàm băm với một mảng.
 - Va chạm là xấu. Bạn cần một hàm băm giảm thiểu va chạm.
 - Bảng băm có tìm kiếm, chèn và xóa rất nhanh.
@@ -229,17 +232,17 @@ ch06: Breadth-first-search
 - Sau khi kiểm tra một người, hãy đảm bảo bạn không kiểm tra họ lại. Nếu không, bạn có thể rơi vào vòng lặp vô hạn.
 
 ch07: Trees
-• Cây là một loại đồ thị, nhưng cây không có chu kỳ.
-• Depth-first search là một thuật toán duyệt đồ thị khác. Nó không thể được sử dụng để tìm đường đi ngắn nhất.
-• Cây nhị phân là một loại cây đặc biệt nơi các nút có thể có tối đa hai con.
-• Có nhiều loại mã hóa ký tự khác nhau. Unicode là tiêu chuẩn quốc tế, và UTF-8 là mã hóa Unicode phổ biến nhất.
+- Cây là một loại đồ thị, nhưng cây không có chu kỳ.
+- Depth-first search là một thuật toán duyệt đồ thị khác. Nó không thể được sử dụng để tìm đường đi ngắn nhất.
+- Cây nhị phân là một loại cây đặc biệt nơi các nút có thể có tối đa hai con.
+- Có nhiều loại mã hóa ký tự khác nhau. Unicode là tiêu chuẩn quốc tế, và UTF-8 là mã hóa Unicode phổ biến nhất.
 
 ch08: Balanced trees
-• Cây tìm kiếm nhị phân cân bằng (BSTs) cung cấp hiệu suất tìm kiếm big-O tương đương với mảng, với hiệu suất chèn tốt hơn.
-• Độ cao của một cây ảnh hưởng đến hiệu suất của cây.
-• Cây AVL là một loại phổ biến của BST cân bằng. Như hầu hết các cây cân bằng khác, cây AVL tự cân bằng thông qua các phép xoay.
-• B-Tree là các BST tổng quát generalized, nơi mỗi node có thể có nhiều khóa và nhiều child node.
-• Thời gian tìm kiếm giống như thời gian di chuyển đến cửa hàng thực phẩm. B-Tree cố gắng giảm thiểu thời gian tìm kiếm bằng cách đọc nhiều dữ liệu trong một lần.
+- Cây tìm kiếm nhị phân cân bằng (BSTs) cung cấp hiệu suất tìm kiếm big-O tương đương với mảng, với hiệu suất chèn tốt hơn.
+- Độ cao của một cây ảnh hưởng đến hiệu suất của cây.
+- Cây AVL là một loại phổ biến của BST cân bằng. Như hầu hết các cây cân bằng khác, cây AVL tự cân bằng thông qua các phép xoay.
+- B-Tree là các BST tổng quát generalized, nơi mỗi node có thể có nhiều khóa và nhiều child node.
+- Thời gian tìm kiếm giống như thời gian di chuyển đến cửa hàng thực phẩm. B-Tree cố gắng giảm thiểu thời gian tìm kiếm bằng cách đọc nhiều dữ liệu trong một lần.
 
 ch09: Dijkstra's algorithm
 - Breadth-first search được sử dụng để tính toán đường đi ngắn nhất cho
@@ -250,22 +253,22 @@ ch09: Dijkstra's algorithm
 - Nếu có trọng số âm, sử dụng thuật toán Bellman-Ford.
 
 ch10: Greedy algorithms
-• Thuật toán tham lam (greedy algorithms) tối ưu hóa cục bộ, hy vọng sẽ đạt được giá trị tối ưu toàn cầu.
-• Một vấn đề thuộc P nếu nó vừa nhanh chóng giải quyết vừa nhanh chóng xác minh.
-• Một vấn đề thuộc NP nếu nó khó giải quyết nhưng lại nhanh chóng xác minh.
-• Nếu chúng ta tìm thấy một thuật toán nhanh (thời gian đa thức) cho mọi vấn đề trong NP, thì P = NP.
-• Một vấn đề thuộc NP-Hard nếu bất kỳ vấn đề nào trong NP đều có thể được giảm bớt về vấn đề đó.
-• Nếu một vấn đề thuộc cả NP và NP-Hard, nó là NP-complete.
-• Nếu bạn đối mặt với một vấn đề NP-Hard, lựa chọn tốt nhất là sử dụng một thuật toán xấp xỉ (approximation algorithm).
-• Thuật toán tham lam dễ viết và chạy nhanh, vì vậy chúng làm approximation algorithm tốt.
+- Thuật toán tham lam (greedy algorithms) tối ưu hóa cục bộ, hy vọng sẽ đạt được giá trị tối ưu toàn cầu.
+- Một vấn đề thuộc P nếu nó vừa nhanh chóng giải quyết vừa nhanh chóng xác minh.
+- Một vấn đề thuộc NP nếu nó khó giải quyết nhưng lại nhanh chóng xác minh.
+- Nếu chúng ta tìm thấy một thuật toán nhanh (thời gian đa thức) cho mọi vấn đề trong NP, thì P = NP.
+- Một vấn đề thuộc NP-Hard nếu bất kỳ vấn đề nào trong NP đều có thể được giảm bớt về vấn đề đó.
+- Nếu một vấn đề thuộc cả NP và NP-Hard, nó là NP-complete.
+- Nếu bạn đối mặt với một vấn đề NP-Hard, lựa chọn tốt nhất là sử dụng một thuật toán xấp xỉ (approximation algorithm).
+- Thuật toán tham lam dễ viết và chạy nhanh, vì vậy chúng làm approximation algorithm tốt.
 
 ch11: Dynamic programming
-• Quy hoạch động hữu ích khi bạn cố gắng tối ưu hóa một điều gì đó dưới ràng buộc nào đó.
-• Bạn có thể sử dụng quy hoạch động khi vấn đề có thể được chia thành các bài toán con rời rạc.
-• Mọi giải pháp quy hoạch động đều liên quan đến một lưới.
-• Các giá trị trong các ô thường là điều bạn đang cố gắng tối ưu hóa.
-• Mỗi ô là một bài toán con, vì vậy hãy suy nghĩ về cách bạn có thể chia vấn đề của mình thành các bài toán con.
-• Không có một công thức duy nhất để tính toán một giải pháp quy hoạch động.
+- Quy hoạch động hữu ích khi bạn cố gắng tối ưu hóa một điều gì đó dưới ràng buộc nào đó.
+- Bạn có thể sử dụng quy hoạch động khi vấn đề có thể được chia thành các bài toán con rời rạc.
+- Mọi giải pháp quy hoạch động đều liên quan đến một lưới.
+- Các giá trị trong các ô thường là điều bạn đang cố gắng tối ưu hóa.
+- Mỗi ô là một bài toán con, vì vậy hãy suy nghĩ về cách bạn có thể chia vấn đề của mình thành các bài toán con.
+- Không có một công thức duy nhất để tính toán một giải pháp quy hoạch động.
 
 
 
@@ -488,7 +491,7 @@ Chapter 12. About the Author
 
 
 ## Cloud native spring
-ch01: introduction cloud native
+**ch01: introduction cloud native**
 -	Các ứng dụng cloud native là các hệ thống phân tán cao được thiết kế đặc biệt và hoạt động trên đám mây.
 -	Đám mây là một cơ sở hạ tầng CNTT được cung cấp dưới dạng hàng hóa về tài nguyên điện toán, lưu trữ và mạng
 -	Trong đám mây, người dùng chỉ trả tiền cho các tài nguyên thực tế mà họ sử dụng.
@@ -505,7 +508,7 @@ ch01: introduction cloud native
 -	Để thiết kế các ứng dụng cloud native, chúng tôi sẽ sử dụng service-based style architecture được đặc trưng bởi các dịch vụ và tương tác của chúng.
 -	Cloud native services có thể được phân loại thành application services (stateless) and data services (stateful).
 
-ch02: Cloud native patterns and technologies
+**ch02: Cloud native patterns and technologies**
 -	Phương pháp 15 yếu tố xác định các nguyên tắc phát triển để xây dựng các ứng dụng cung cấp tính di động tối đa trên các môi trường thực thi, phù hợp để triển khai trên nền tảng đám mây, có thể được mở rộng, đảm bảo sự cân bằng môi trường giữa phát triển và sản xuất và cho phép continuous delivery.
 -	Spring là một bộ các dự án cung cấp tất cả các chức năng phổ biến nhất để xây dựng các ứng dụng hiện đại trong Java.
 -	Spring Framework cung cấp một application context trong đó beans và properties được quản lý trong toàn bộ vòng đời
@@ -518,7 +521,7 @@ ch02: Cloud native patterns and technologies
 -	Kubernetes Deployments mô tả cách tạo các phiên bản ứng dụng dưới dạng Pod, bắt đầu từ container images.
 -	Kubernetes Services cho phép bạn expose các endpoints của ứng dụng ra bên ngoài cụm.
 
-ch03: Getting started with cloud native development
+**ch03: Getting started with cloud native development**
 -	Mỗi ứng dụng cloud native nên được theo dõi trong codebase riêng của nó và tất cả các phụ thuộc của nó phải được khai báo trong một tệp kê khai bằng các công cụ như Gradle hoặc Maven.
 -	Các ứng dụng cloud native không phụ thuộc vào các máy chủ được đưa vào môi trường. Thay vào đó, chúng sử dụng một máy chủ nhúng và khép kín.
 -	Tomcat là máy chủ nhúng mặc định cho các ứng dụng Spring Boot, và nó có thể được cấu hình thông qua các thuộc tính để tùy chỉnh các cổng mà nó lắng nghe, kết nối, hết thời gian chờ và luồng.
@@ -537,7 +540,7 @@ ch03: Getting started with cloud native development
 -	@JsonTest là để test JSON serialization và deserialization.
 -	GitHub Actions là một công cụ được cung cấp bởi GitHub để khai báo pipelines (hoặc workflows) để tự động hóa các tác vụ. Nó có thể được sử dụng để xây dựng một deployment pipeline.
 
-ch04: Externalized configuration management
+**ch04: Externalized configuration management**
 -	Sự trừu tượng của Spring Environment cung cấp một giao diện thống nhất để truy cập các properties và profiles.
 -	Properties là các cặp key/value được sử dụng để lưu trữ cấu hình
 -	Profile là các nhóm bean logic chỉ được đăng ký khi một profile cụ thể đang hoạt động.
@@ -555,7 +558,7 @@ ch04: Externalized configuration management
 -	Các sự kiện RefreshScopeRefreshedEvent có thể được kích hoạt sau khi một thay đổi mới được đẩy vào kho lưu trữ cấu hình, để ứng dụng khách tải lại ngữ cảnh bằng cách sử dụng dữ liệu cấu hình mới nhất.
 -	Spring Boot Actuator định nghĩa một /actuator/refresh endpoint mà các bạn có thể sử dụng để trigger event theo cách thủ công.
 
-ch05: Persisting and managing data in the cloud
+**ch05: Persisting and managing data in the cloud**
 -	Trạng thái là tất cả mọi thứ cần được bảo tồn khi tắt một dịch vụ và quay vòng một phiên bản mới.
 -	Data services là các thành phần trạng thái của kiến trúc cloud native, đòi hỏi các công nghệ lưu trữ phải duy trì trạng thái
 -	Sử dụng các dịch vụ dữ liệu trên đám mây là một thách thức vì đó là một môi trường năng động.
@@ -576,7 +579,7 @@ ch05: Persisting and managing data in the cloud
 -	Lược đồ cơ sở dữ liệu rất quan trọng đối với các ứng dụng. Trong sản xuất, bạn nên sử dụng một công cụ như Flyway, cung cấp kiểm soát phiên bản cho cơ sở dữ liệu của bạn.
 -	Flyway nên quản lý bất kỳ thay đổi cơ sở dữ liệu nào để đảm bảo khả năng tái tạo, truy xuất nguồn gốc và độ tin cậy
 
-ch06: Containerizing Spring Boot
+**ch06: Containerizing Spring Boot**
 -	Image container là các gói thực thi nhẹ bao gồm mọi thứ cần thiết để chạy ứng dụng bên trong độc lập.
 -	Mỗi image được tạo thành từ một số layers và mỗi layer đại diện cho một sửa đổi được tạo ra bởi lệnh tương ứng. Artifact cùng có thể được chạy dưới dạng container.
 -	Khi bạn chạy một container, một writable layer bổ sung được thêm vào trên cùng của các image layers.
@@ -593,7 +596,7 @@ ch06: Containerizing Spring Boot
 -	Bạn có thể sử dụng GitHub Actions để tự động hóa quá trình đóng gói ứng dụng dưới dạng container image, quét các lỗ hổng và xuất bản nó lên container registry. Đó là một phần của commit stage của workflow.
 -	Kết quả của commit stage của workflow là một release candidate
 
-ch07: Kubernetes fundamentals for Spring Boot
+**ch07: Kubernetes fundamentals for Spring Boot**
 -	Docker hoạt động tốt khi chạy các container một phiên bản trên một máy duy nhất. Khi hệ thống của bạn cần các thuộc tính như khả năng mở rộng và khả năng phục hồi, bạn có thể sử dụng Kubernetes
 -	Kubernetes cung cấp tất cả các tính năng để mở rộng quy mô container trên một cụm máy, đảm bảo khả năng phục hồi cả khi container bị lỗi và khi máy gặp sự cố.
 -	Pod là đơn vị có thể deployable nhỏ nhất trong Kubernetes.
@@ -612,7 +615,7 @@ ch07: Kubernetes fundamentals for Spring Boot
 -	Octant là một công cụ tiện lợi mà bạn có thể sử dụng không chỉ để inspecting và khắc phục sự cố cụm Kubernetes cục bộ mà còn cho cụm từ xa.
 -	Kubeval là một công cụ tiện lợi mà bạn có thể sử dụng để validate các tệp kê khai Kubernetes. Tính năng này đặc biệt hữu ích khi được đưa vào deployment pipeline.
 
-ch08: Reactive Spring: Resilience and scalability
+**ch08: Reactive Spring: Resilience and scalability**
 - Khi bạn mong đợi lưu lượng truy cập cao và đồng thời với ít tài nguyên tính toán hơn, mô hình reactive có thể cải thiện scalability, resilience và cost-effectiveness.
 - Chọn giữa ngăn xếp không phản ứng và ngăn xếp phản ứng theo yêu cầu của bạn.
 - Spring WebFlux dựa trên Project Reactor và là core của reactive stack trong Spring. Nó hỗ trợ I / O bất đồng bộ, non-blocking.
@@ -625,7 +628,7 @@ ch08: Reactive Spring: Resilience and scalability
 - WebClient dựa trên Project Reactor và làm việc với các publisher Mono và Flux.
 - Bạn có thể sử dụng các Reactor operators để cấu hình timeouts, retries, fallbacks và error handling để làm cho tương tác linh hoạt hơn với bất kỳ lỗi nào trong dịch vụ downstream hoặc do mạng.
 
-ch09: API gateway and circuit breakers
+**ch09: API gateway and circuit breakers**
 - Một API gateway cung cấp một số lợi ích trong kiến trúc phân tán, bao gồm tách các internal services khỏi external API và cung cấp một nơi trung tâm, thuận tiện để xử lý các mối quan tâm xuyên suốt như bảo mật, giám sát và khả năng phục hồi
 - Spring Cloud Gateway dựa trên Spring reactive stack. Nó cung cấp một API gateway implementation, và nó tích hợp với các project Spring khác để thêm các mối quan tâm xuyên suốt cho ứng dụng, bao gồm Spring Security, Spring Cloud Circuit Breaker và Spring Session.
 - Routes là cốt lõi của Spring Cloud Gateway. Chúng được xác định bởi một ID duy nhất, một tập hợp các predicates xác định xem có nên đi theo route này hay không, URI để chuyển tiếp yêu cầu nếu predicate cho phép và một tập hợp các filters được áp dụng trước hoặc sau khi chuyển tiếp yêu cầu downstream.
@@ -636,7 +639,7 @@ ch09: API gateway and circuit breakers
 - Kubernetes Ingress resource cho phép bạn quản lý quyền truy cập bên ngoài vào các ứng dụng đang chạy bên trong cụm Kubernetes.
 - Routing rules được thực thi bởi ingress controller, đây là một ứng dụng cũng chạy trong cluster.
 
-ch10: Event-driven applications and functions
+**ch10: Event-driven applications and functions**
 - Kiến trúc hướng sự kiện là các hệ thống phân tán tương tác với nhau bằng cách sản xuất và tiêu thụ các sự kiện.
 - Một sự kiện là một cái gì đó có liên quan đã xảy ra trong một hệ thống
 - Trong mô hình pub/sub, producers publish các sự kiện, được gửi đến tất cả consumers để được tiêu thụ.
@@ -656,4 +659,33 @@ ch10: Event-driven applications and functions
 - Trong Spring Cloud Stream, các destination bindings (input và output) kết nối bridge các producers và consumers trong các ứng dụng của bạn với exchanges và queues trong một message broker như RabbitMQ.
 - Functions và consumers được kích hoạt tự động khi có message mới.
 - Suppliers cần phải được kích hoạt rõ ràng, chẳng hạn như bằng cách gửi message rõ ràng đến một destination binding.
+
+**ch11: Security: Authentication and SPA**
+- Access control systems yêu cầu nhận dạng identifier (bạn là ai?), xác thực authentication (bạn có thể chứng minh đó thực sự là bạn không?) và ủy quyền authorization (bạn được phép làm gì?).
+- Một chiến lược phổ biến để thực hiện authentication và authorization trong các ứng dụng cloud native dựa trên JWT làm data format, OAuth2 làm authorization framework và OpenID Connect làm authentication protocol.
+- Khi sử dụng OIDC authentication, ứng dụng Client khởi tạo luồng và ủy quyền Authorization Server cho xác thực thực tế. Sau đó, Authorization Server phát hành ID Token cho Client.
+- ID Token bao gồm thông tin về user authentication.
+- Keycloak là giải pháp quản lý danh tính và truy cập hỗ trợ OAuth2 và OpenID Connect và có thể sử dụng như một Authorization Server.
+- Spring Security cung cấp hỗ trợ riêng cho OAuth2 và OpenID Connect, và các bạn có thể sử dụng nó để biến các ứng dụng Spring Boot thành OAuth2 Clients.
+- Trong Spring Security, các bạn có thể cấu hình cả authentication và authorization trong một bean SecurityWebFilterChain. Để kích hoạt OIDC authentication flow, bạn có thể sử dụng oauth2Login() DSL.
+- Mặc định, Spring Security exposes một /logout endpoint để đăng xuất người dùng.
+- Trong context OIDC/OAuth2, chúng ta cũng cần truyền request logout đến Authorization Server (chẳng hạn như Keycloak) để đăng xuất user ra khỏi đó. Chúng ta có thể làm điều đó thông qua luồng RP-Initiated Logout được hỗ trợ bởi Spring Security thông qua class OidcClientInitiatedServerLogoutSuccessHandler.
+- Khi một ứng dụng Spring Boot secure là backend cho SPA, chúng ta cần cấu hình CSRF protection thông qua cookies và thực hiện một authentication entry point trả về phản hồi HTTP 401 khi request không được authenticated (trái ngược với response HTTP 302 mặc định tự động chuyển hướng đến Authorization Server).
+- Spring Security Test dependency cung cấp một số tiện ích thuận tiện để kiểm thử bảo mật.
+- Bean WebTestClient có thể được enhanced bằng cách mutating request context của nó thông qua một cấu hình cụ thể cho OIDC login và CSRF protection.
+
+**ch12: Security: Authorization and auditing**
+- Trong thiết lập OIDC/OAuth2, Client (Edge Service) được cấp quyền truy cập vào Resource Server (Catalog Service and Order Service) thay mặt cho người dùng thông qua Access Token.
+- Spring Cloud Gateway cung cấp filter TokenRelay để thêm Access Token vào bất kỳ request nào được định tuyến downstream một cách tự động.
+- Theo định dạng JWT, ID Token và Access Token có thể truyền bá thông tin liên quan dưới dạng claims về người dùng được xác thực. Ví dụ: bạn có thể thêm roles claim và cấu hình Spring - - Security với các chính sách ủy quyền tùy thuộc vào vai trò của người dùng.
+- Các ứng dụng Spring Boot có thể được cấu hình như OAuth2 Resource Server sử dụng Spring Security
+- Trong OAuth2 Resource Server, chiến lược authenticating users hoàn toàn dựa trên Access Token hợp lệ được cung cấp trong Authorization header của mỗi request. Chúng tôi gọi đó là authentication JWT.
+- Trong OAuth2 Resource Server, các security policies được thực thi thông qua bean SecurityFilterChain (imperative) hoặc SecurityWebFilterChain (reactive).
+- Spring Security đại diện cho permission, role và scopes dưới dạng các đối tượng GrantedAuthority.
+- Bạn có thể cung cấp một beans JwtAuthenticationConverter tùy chỉnh để xác định cách trích xuất các authority được cấp từ JWT, ví dụ: sử dụng roles claims.
+- Granted authorities có thể được sử dụng để áp dụng chiến lược RBAC và bảo vệ các ep, tùy thuộc vào role của user.
+- Các thư viện Spring Data hỗ trợ auditing để theo dõi ai đã tạo ra một thực thể và ai đã cập nhật nó lần cuối. Các bạn có thể kích hoạt tính năng này trong cả Spring Data JDBC và Spring - Data R2DBC bằng cách cấu hình một bean AuditorAware (hoặc ReactiveAuditorAware) để trả về username của currently authenticated user.
+- Khi data auditing được bật, bạn có thể sử dụng chú thích @CreatedBy và @LastModifiedBy để tự động đưa đúng giá trị khi thao tác tạo hoặc cập nhật xảy ra.
+- Testing security là một thách thức, nhưng Spring Security cung cấp các tiện ích tiện lợi để làm cho điều đó dễ dàng hơn, bao gồm các expressions mutate HTTP để bao gồm JWT Access Token (.with(jwt()) hoặc .mutateWith (mockJwt())) hoặc để chạy một trường hợp kiểm thử trong một ngữ cảnh bảo mật cụ thể cho một người dùng nhất định (@WithMockUser)
+- Testcontainers có thể giúp viết full integration test bằng cách sử dụng một container Keycloak thực tế để xác minh các tương tác với Spring Security
 

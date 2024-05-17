@@ -689,3 +689,56 @@ Acknowledgements
 - Testing security là một thách thức, nhưng Spring Security cung cấp các tiện ích tiện lợi để làm cho điều đó dễ dàng hơn, bao gồm các expressions mutate HTTP để bao gồm JWT Access Token (.with(jwt()) hoặc .mutateWith (mockJwt())) hoặc để chạy một trường hợp kiểm thử trong một ngữ cảnh bảo mật cụ thể cho một người dùng nhất định (@WithMockUser)
 - Testcontainers có thể giúp viết full integration test bằng cách sử dụng một container Keycloak thực tế để xác minh các tương tác với Spring Security
 
+**ch13:Observability and monitoring**
+- Observability là một thuộc tính của các ứng dụng cloud native đo lường mức độ chúng ta có thể suy ra trạng thái bên trong của ứng dụng từ đầu ra của nó. 
+- Monitoring là về việc kiểm soát các faulty states đã biết. Observability vượt xa điều đó và cho phép chúng ta đặt câu hỏi về những điều chưa biết. 
+- Logs (event logs) là các bản ghi rời rạc về điều gì đó đã xảy ra theo thời gian trong một ứng dụng phần mềm. 
+- Spring Boot hỗ trợ ghi nhật ký thông qua SLF4J, cung cấp façade trên các thư viện ghi nhật ký phổ biến nhất. 
+- Theo mặc định, logs được in thông qua đầu ra tiêu chuẩn theo khuyến nghị của phương pháp 15 yếu tố. 
+- Sử dụng Grafana observability stack, Fluent Bit thu thập logs được tạo bởi tất cả các ứng dụng và chuyển tiếp chúng đến Loki, nơi lưu trữ chúng và làm cho chúng có thể tìm kiếm được. Sau đó, bạn có thể sử dụng Grafana để điều hướng logs. 
+- Các ứng dụng nên expose health endpoints để kiểm tra trạng thái của chúng. 
+- Spring Boot Actuator exposes một health endpoint tổng thể hiển thị trạng thái của ứng dụng và tất cả các components hoặc service mà nó có thể sử dụng. Nó cũng cung cấp các endpoints chuyên biệt được sử dụng làm liveness and readiness probes của Kubernetes. 
+- Khi liveness probe down, điều đó có nghĩa là ứng dụng đã chuyển sang trạng thái lỗi không thể khôi phục được, vì vậy Kubernetes sẽ cố gắng khởi động lại nó. 
+- Khi readiness probe down, ứng dụng chưa sẵn sàng để xử lý các request, vì vậy Kubernetes sẽ dừng mọi lưu lượng truy cập hướng đến phiên bản đó. 
+- Metrics là dữ liệu số về ứng dụng, được đo theo các khoảng thời gian đều đặn. 
+- Spring Boot Actuator tận dụng Micrometer façade để instrument mã Java, tạo metrics và hiển thị chúng thông qua một điểm cuối chuyên dụng. 
+- Khi client Prometheus nằm trên classpath, Spring Boot có thể hiển thị metric ở định dạng Prometheus hoặc OpenMetrics. 
+- Sử dụng Grafana observability stack, Prometheus tổng hợp và lưu trữ metrics từ tất cả các ứng dụng. Sau đó, bạn có thể sử dụng Grafana để truy vấn metrics, thiết kế dashboard và đặt alert. 
+- Distributed tracing, một kỹ thuật để theo dõi các requests khi chúng chảy qua hệ thống phân tán, cho phép chúng tôi khoanh vùng nơi xảy ra lỗi trong hệ thống phân tán và khắc phục sự cố hiệu suất. 
+- Traces được đặc trưng bởi trace ID và bao gồm nhiều spans, đại diện cho các bước trong transaction. 
+- Dự án OpenTelemetry bao gồm các API và thiết bị đo đạc instrumentation tạo ra traces và spans cho các thư viện Java phổ biến nhất. 
+- OpenTelemetry Java Agent là một JAR artifact được cung cấp bởi dự án có thể được gắn vào bất kỳ ứng dụng Java nào. Nó injects bytecode cần thiết một cách linh hoạt để capture traces và spans từ tất cả các thư viện đó và xuất chúng ở các định dạng khác nhau mà không cần phải thay đổi mã nguồn Java của bạn một cách rõ ràng. 
+- Sử dụng Grafana observability stack, Tempo tổng hợp và lưu trữ metrics từ tất cả các ứng dụng. Sau đó, bạn có thể sử dụng Grafana để truy vấn traces và tương quan chúng với logs. 
+- Spring Boot Actuator cung cấp management and monitoring endpoints để đáp ứng bất kỳ yêu cầu nào bạn có thể có để làm cho các ứng dụng của bạn sẵn sàng sản xuất. 
+
+**ch14: Configuration and secrets management**
+- Một configuration server được build với Spring Cloud Config Server có thể được bảo vệ bằng bất kỳ tính năng nào mà Spring Security cung cấp. Ví dụ: bạn có thể yêu cầu client sử dụng xác thực HTTP Basic để truy cập các điểm cuối cấu hình được hiển thị bởi máy chủ. 
+- Configuration data trong ứng dụng Spring Boot có thể reloaded bằng cách gọi /actuator/refresh endpoint lộ ra bởi Spring Boot Actuator. 
+- Để truyền thao tác config refresh sang các ứng dụng khác trong hệ thống, các bạn có thể sử dụng Spring Cloud Bus. 
+- Spring Cloud Config Server cung cấp một module Monitor expose một /monitor endpoint mà các nhà cung cấp code repository có thể gọi thông qua webhook bất cứ khi nào có thay đổi mới được đẩy lên config repository. Kết quả là tất cả các ứng dụng bị ảnh hưởng bởi sự thay đổi cấu hình sẽ được Spring Cloud Bus kích hoạt để load lại cấu hình. Toàn bộ quá trình diễn ra tự động. 
+- Managing secrets là một nhiệm vụ quan trọng của bất kỳ hệ thống phần mềm nào, và nó rất nguy hiểm khi mắc lỗi. 
+- Spring Cloud Config cung cấp tính năng mã hóa và giải mã để xử lý các bí mật một cách an toàn trong kho cấu hình, sử dụng các khóa đối xứng hoặc không đối xứng. 
+- Bạn cũng có thể sử dụng các giải pháp quản lý bí mật được cung cấp bởi các nhà cung cấp đám mây như Azure, AWS và Google Cloud và tận dụng sự tích hợp với Spring Boot được cung cấp bởi Spring Cloud Azure, Spring Cloud AWS và Spring Cloud GCP. 
+- HashiCorp Vault là một lựa chọn khác. Các bạn có thể sử dụng nó để cấu hình tất cả các ứng dụng Spring Boot trực tiếp thông qua Spring Vault project hoặc làm cho nó trở thành backend cho Spring Cloud Config Server. 
+- Khi các ứng dụng Spring Boot được deploy lên một Kubernetes cluster, các bạn cũng có thể cấu hình chúng thông qua ConfigMaps (đối với dữ liệu cấu hình không nhạy cảm) và Secrets (đối với dữ liệu cấu hình nhạy cảm). 
+- Bạn có thể sử dụng ConfigMaps và Secrets làm nguồn giá trị cho các biến môi trường hoặc mount chúng dưới dạng volume vào container. Cách tiếp cận thứ hai là cách tiếp cận ưa thích và được hỗ trợ bởi Spring Boot natively. 
+- Secrets are not secret. Dữ liệu chứa bên trong chúng không được mã hóa theo mặc định, vì vậy bạn không nên đặt chúng dưới sự kiểm soát phiên bản và đưa chúng vào kho lưu trữ của mình. 
+- Platform team chịu trách nhiệm protecting secrets, chẳng hạn như bằng cách sử dụng dự án Sealed Secrets để mã hóa secrets và giúp chúng có thể đặt chúng dưới sự kiểm soát phiên bản. 
+- Quản lý một số tệp Kubernetes manifests để triển khai một ứng dụng không trực quan lắm. Kustomize cung cấp một cách thuận tiện để quản lý, triển khai, cấu hình và nâng cấp ứng dụng trong Kubernetes.
+- Trong số những thứ khác, Kustomize cung cấp trình tạo để xây dựng ConfigMaps và Secrets, và một cách để kích hoạt rolling restart bất cứ khi nào chúng được cập nhật. 
+- Cách tiếp cận Kustomize để tùy chỉnh cấu hình dựa trên các khái niệm về bases và overlays.
+- Overlays được xây dựng trên các tệp base manifests và mọi tùy chỉnh đều được áp dụng thông qua các bản vá. Bạn đã thấy cách xác định các bản vá để tùy chỉnh các biến môi trường, ConfigMaps, container image và replicas.
+
+**ch15: Continuous delivery and GitOps**
+- Ý tưởng đằng sau continuous delivery là một ứng dụng luôn ở trạng thái có thể phát hành. 
+- Khi delivery pipeline hoàn tất quá trình thực thi, bạn sẽ nhận được một artifact (container image) mà bạn có thể sử dụng để triển khai ứng dụng trong sản xuất 
+- Khi nói đến continuous delivery, mỗi release candidate phải được nhận dạng duy nhất. 
+- Sử dụng Git commit hash, bạn có thể đảm bảo tính duy nhất, khả năng truy xuất nguồn gốc và tự động hóa. Semantic versioning có thể được sử dụng làm  display name được truyền đạt cho người dùng và khách hàng. 
+- Vào cuối commit stage, một release candidate được gửi đến artifact repository. Tiếp theo, acceptance stage triển khai ứng dụng trong môi trường sản xuất và chạy các bài functional và non-functional tests. Nếu tất cả đều thành công, release candidate đã sẵn sàng để sản xuất. 
+- Cách tiếp cận Kustomize để tùy chỉnh cấu hình dựa trên các khái niệm về base và overlay. Overlay được xây dựng trên các tệp base manifests và được tùy chỉnh thông qua các bản vá (patch). 
+- Bạn đã thấy cách xác định các bản vá để tùy chỉnh các biến môi trường, Secret được mount dưới dạng volume, CPU và memory resource, ConfigMaps và Ingress. 
+- Phần cuối cùng của deployment pipeline là production stage, trong đó deployment manifests được cập nhật với phiên bản phát hành mới nhất và cuối cùng được triển khai. 
+- Deployment có thể là push-based hoặc pull-based. 
+- GitOps là một tập hợp các thực tiễn để vận hành và quản lý hệ thống phần mềm. 
+- GitOps dựa trên bốn nguyên tắc theo đó việc triển khai hệ thống phải được khai báo (declarative), versioned và immutable, pulled automatically và continuously reconciled. 
+- Argo CD là một software agent chạy trong một cluster và nó tự động pulls desired state từ source repository và áp dụng nó cho cluster bất cứ khi nào hai trạng thái phân kỳ. Đó là cách chúng tôi triển continuous deployment. 
